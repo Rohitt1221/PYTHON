@@ -1,0 +1,101 @@
+Q1. How do you comment code in Python? What are the different types of comments?
+
+	Answer:-
+		comments begin with a hash character (#) and extend until the end of the line
+										or
+		comment text within triple quotes (either single or double)
+		
+		Type of comment:-
+				1.Single-line comments
+				2.Multi-line comments
+				
+Q2. What are variables in Python? How do you declare and assign values to variables?
+
+	Answer:-
+		Variables are containers for storing data values.
+		
+		To declare and assign values to variables in Python, you use the assignment operator (=). 
+		You choose a name for the variable on the left side of the assignment operator, 
+		and the value you want to assign to the variable goes on the right side.
+		
+		Example:-
+				variable_name = value
+				
+Q3.How do you convert one data type to another in Python?
+	Answer:-
+			You can convert one data type to another using type conversion functions or by using 
+			the target data type as a constructor.
+
+			Here are some common methods for data type conversion:
+				
+				float_num = 3.14
+				integer_num = int(float_num)  # Converts float to int
+				print(integer_num)  # Output: 3
+
+				string_num = "42"
+				integer_num = int(string_num)  # Converts string to int
+				print(integer_num)  # Output: 42
+
+				boolean_value = True
+				integer_num = int(boolean_value)  # Converts boolean to int
+				print(integer_num)  # Output: 1
+				
+Q4. How do you write and execute a Python script from the command line?
+
+	Answer:-
+			 open a command-line and type in the word python , or python3 if you have both versions,
+			 followed by the path to your script
+			to run Python code is through an interactive session. To start a Python interactive session, 
+			just open a command-line or terminal and then type in python, or python3 depending on your Python installation,
+			and then hit Enter.
+			
+Q5. Given a list my_list = [1, 2, 3, 4, 5], write the code to slice the list and obtain the sub-list [2, 3].
+	
+	Answer:-
+			my_list = [1, 2, 3, 4, 5]
+			sub_list=my_list[1:3]
+			print(sub_list)
+			
+Q6. What is a complex number in mathematics, and how is it represented in Python?
+
+	Answer:-
+			In mathematics, a complex number is a number that comprises a real part and an imaginary part.
+			It is written in the form a + bi, where a is the real part and b is the imaginary part.
+			The imaginary part is multiplied by the imaginary unit i.
+			
+			In Python, complex numbers are represented using the complex data type. The imaginary part is 
+			denoted by appending j or J to the numeric value
+			
+			example:-
+				# Creating complex numbers
+					z1 = 3 + 4j
+					z2 = 1.5 - 2.5j
+
+Q7. What is the correct way to declare a variable named age and assign the value 25 to it?
+
+	Answer:-
+			age = 25
+
+Q8. Declare a variable named price and assign the value 9.99 to it. What data type does this variable belong to?
+
+	Answer:-
+			price = 9.99
+			In this case, "price" would indeed be a float variable.
+
+Q9. Create a variable named name and assign your full name to it as a string. How would you print the value of this variable?
+
+	Answer:-
+			name = "Rohit Makwana"
+			print(name)
+			
+Q10. Given the string "Hello, World!", extract the substring "World".
+
+	Answer:-
+			_string= "Hello , word !"
+			sub_string=_string[8:12]
+			print(sub_string)
+		
+Q11. Create a variable named "is_student" and assign it a boolean value indicating whether you are currently a student or not.
+
+	Answer:-
+			is_student = True
