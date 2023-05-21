@@ -1,0 +1,160 @@
+Q-1Create one variable containing following type of data:
+	(i) string
+	(ii) list
+	(iii) float
+	(iv) tuple
+Answer:-
+
+	(i) String
+	my_string = "Hello, World!"
+
+	(ii) List
+	my_list = [1, 2, 3, 4, 5]
+
+	(iii) Float
+	my_float = 3.14
+
+	(iv) Tuple
+	my_tuple = (6, 7, 8, 9, 10)
+
+Q2. Given are some following variables containing data:
+
+	(i) var1 = ‘ ‘
+	(ii) var2 = ‘[ DS , ML , Python]’
+	(iii) var3 = [ ‘DS’ , ’ML’ , ‘Python’ ]
+	(iv) var4 = 1.
+Answer:-
+
+	(i) var1 is a string variable that contains an empty string. 
+	(ii) var2 is also a string variable that contains a string representation of a list.
+	(iii) var3 is a list variable that directly contains three string elements.
+	(iv) var4 is an integer variable that stores the value 1. the data type of the above given variable is List.
+
+Q3. Explain the use of the following operators using an example:
+
+	(i) /
+	(ii) %
+	(iii) //
+	(iv) **
+Answer:-
+	i) / (Division Operator): The division operator is used to perform division between two numbers and returns the quotient as a floating-point number.
+	Example:
+	a = 5
+	b = 4
+	result = a / b
+	print(result)
+
+	(ii) % (Module Operator): The modulo operator is used to calculate the remainder of the division between two numbers.
+	Example:
+	a = 5
+	b = 4
+	result = a % b
+	print(result)
+
+	(iii) // (Floor Division Operator): The floor division operator is used to perform division between two numbers and returns the quotient as an integer, rounding down to the nearest whole number.
+	Example:
+	a = 10
+	b = 3
+	result = a // b
+	print(result)
+
+	(iv) ** (Exponentiation Operator): The exponentiation operator is used to raise a number to a power.
+	Example:	
+	a = 2
+	b = 3
+	result = a ** b
+	print(result)
+
+Q4. Create a list of length 10 of your choice containing multiple types of data. Using for loop print the element and its data type.
+Answer:-
+	my_list = [1, 2.5, 'Hello', True, [1, 2, 3], {'name': 'Ankit', 'age': 22}, None, (4, 5), 6 + 2j, False]
+
+	for element in my_list:
+		print(f"Element: {element}, Data Type: {type(element)}")
+	output:-
+	Element: 1, Data Type: <class 'int'>
+	Element: 2.5, Data Type: <class 'float'>
+	Element: Hello, Data Type: <class 'str'>
+	Element: True, Data Type: <class 'bool'>
+	Element: [1, 2, 3], Data Type: <class 'list'>
+	Element: {'name': 'Ankit', 'age': 22}, Data Type: <class 'dict'>
+	Element: None, Data Type: <class 'NoneType'>
+	Element: (4, 5), Data Type: <class 'tuple'>
+	Element: (6+2j), Data Type: <class 'complex'>
+	Element: False, Data Type: <class 'bool'>
+
+Q5. Using a while loop, verify if the number A is purely divisible by number B and if so then how many times it can be divisible.
+
+Answer:-
+	A = 24
+	B = 3
+
+	count = 0
+
+	while A % B == 0:
+		A = A // B
+		count += 1
+
+	print(f"Number A is divisible by number B {count} times.")
+	output:-
+	Number A is divisible by number B 3 times.
+
+Q6. Create a list containing 25 int type data. Using for loop and if-else condition print if the element is divisible by 3 or not.
+
+Answer:-
+	my_list = [7, 12, 15, 8, 21, 30, 17, 9, 5, 18, 27, 14, 33, 22, 11, 36, 20, 3, 16, 24, 19, 6, 13, 10, 25]
+
+	for element in my_list:
+		if element % 3 == 0:
+			print(f"{element} is divisible by 3.")
+		else:
+			print(f"{element} is not divisible by 3.")
+	output:-
+	7 is not divisible by 3.
+	12 is divisible by 3.
+	15 is divisible by 3.
+	8 is not divisible by 3.
+	21 is divisible by 3.
+	30 is divisible by 3.
+	17 is not divisible by 3.
+	9 is divisible by 3.
+	5 is not divisible by 3.
+	18 is divisible by 3.
+	27 is divisible by 3.
+	14 is not divisible by 3.
+	33 is divisible by 3.
+	22 is not divisible by 3.
+	11 is not divisible by 3.
+	36 is divisible by 3.
+	20 is not divisible by 3.
+	3 is divisible by 3.
+	16 is not divisible by 3.
+	24 is divisible by 3.
+	19 is not divisible by 3.
+	6 is divisible by 3.
+	13 is not divisible by 3.
+	10 is not divisible by 3.
+	25 is not divisible by 3.
+
+Q7. What do you understand about mutable and immutable data types? Give examples for both showing this property.
+
+Answer:-
+	Mutable and immutable are two important concepts in programming, particularly when it comes to data types. Here's an explanation of mutable and immutable data types along with examples in Python:
+
+	Immutable Data Types:
+	Immutable data types are those whose values cannot be changed after they are created. If you modify an immutable object, a new object is created with the modified value. Examples of immutable data types in Python include:
+	int (integer)
+	float
+	bool (boolean)
+	str (string)
+	tuple
+	Example:
+	# Immutable data types
+	a = 10
+	b = 3.14
+	c = True
+	d = "Hello"
+	e = (1, 2, 3)
+
+	# Attempting to modify an immutable object
+	a = 20  # Creates a new object with the value 20
