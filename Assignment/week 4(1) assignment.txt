@@ -1,0 +1,161 @@
+Question1, Create a vehicle class with an init method having instance variables as name_of_vehicle, max_speed and average_of_vehicle.
+
+Answer:-
+
+	class vehicle:
+		
+		def __init__(self , name_of_vehicle , max_speed , average_of_vehicle):
+			self.name_of_vehicle = name_of_vehicle
+			self.max_speed = max_speed
+			self.average_of_vehicle = average_of_vehicle
+			
+		def car_details(self):
+			return self.name_of_vehicle,self.max_speed,self.average_of_vehicle
+			
+		my_car = vehicle('toyota' , 140 , 14)
+		
+		my_car.car_details()
+		
+	Output:-
+	
+		('toyota', 140, 14)
+		
+		
+Question 2: Create a child class car from the vehicle class created in Que 1, which will inherit the vehicle class.Create a method named 
+			seating_capacity which takes capacity as an argument and returns the name of the vehicle and its seating capacity.
+			
+Answer:-
+
+	class vehicle:
+    
+		def __init__(self , name_of_vehicle , max_speed , average_of_vehicle):
+			self.name_of_vehicle = name_of_vehicle
+			self.max_speed = max_speed
+			self.average_of_vehicle = average_of_vehicle
+			
+		def car_details(self):
+			return self.name_of_vehicle,self.max_speed,self.average_of_vehicle
+		
+		
+	class car(vehicle):
+    
+		def seating_capacity(self, capacity ):
+			self.capacity = capacity
+			return self.name_of_vehicle, self.capacity
+			
+		my_car = car("RR", 195 , 4)
+		my_car.seating_capacity(5)
+		
+		
+Question 3: What is multiple inheritance? Write a python code to demonstrate multiple inheritance.
+
+Answer:-
+
+	if a child class inherits from more than one class, i.e. this child class is derived from multiple classes, we call it multiple inheritance
+	in Python.
+	This newly derived child class will inherit the properties of all the classes that it is derived from.
+	
+	class window11:
+    
+    def window11(self):
+            print("window11")
+			
+			
+	class window10:
+    
+    def window10(self):
+            print("window10")
+			
+			
+	class os(window11, window10):
+    
+    def cpu_au_mu(self):
+            print("cpu_au_mu")
+			
+	
+	os = os()
+
+	os.window11()
+	os.window10()
+	os.cpu_au_mu()
+	
+	Output:-
+	
+			window11
+			window10
+			cpu_au_mu
+			
+Question 4 : What are getter and setter in python? Create a class and create a getter and a setter method in this class.
+
+Answer:-
+		Getters : These are the methods used in Object-Oriented Programming (OOPS) which helps to access the private attributes from a class.
+		Setters : These are the methods used in OOPS feature which helps to set the value to private attributes in a class.
+		
+		# Creating a class employee with getter and setter functions for employee_id variable
+		class employee:
+
+			def __init__(self,name,employee_id):
+				"""
+				This constructor function creates 2 private vairables 
+				name and employee_id which cannot be directly accessed
+				"""
+				self.__name = name
+				self.__employee_id = employee_id
+			
+			def get_employee_id(self):
+				"""
+				This is getter function gets the employee id of the given employee
+				"""
+				return self.__employee_id
+			
+			def set_employee_id(self,new_id):
+				"""
+				This is a setter function and sets the employee id for given employess
+				"""
+				self.__employee_id = new_id
+				
+			
+			# Example with getter function
+			emp1 = employee('Rohit','111')
+			emp1.get_employee_id()
+			
+			'111'
+			
+			# Example setter function
+			emp1.set_employee_id('112')
+			
+			# Checking new employee id
+			emp1.get_employee_id()
+			'112'
+			
+Question 5 : What is method overriding in python? Write a python code to demonstrate method overriding.
+
+Answer : Method overriding is a feature of object-oriented programming languages where the subclass or child class can 
+		provide the program with specific characteristics or a specific implementation process of data provided that are 
+		already defined in the parent class or superclass.
+		
+		class Animal:
+			def Walk(self):
+					print('Hello, I am the parent class Animal')
+    
+			def communicate(self):
+					print('This is how animal communicates.')
+
+		class Cat(Animal):
+			def Walk(self):
+					print('Hello, I am the child class Cat')
+			
+			def meow(self):
+					print('Cat communicates with Meows')  
+					
+		# Here method Walk is overridden
+
+		#Invoking Parent class through object r
+		r = Animal()
+		r.Walk()
+
+		#Invoking Child class through object r
+		r = Cat()
+		r.Walk()
+		Hello, I am the parent class Animal
+		Hello, I am the child class Cat
