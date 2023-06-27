@@ -1,0 +1,231 @@
+Question 1: Explain Class and Object with respect to Object-Oriented Programming. Give a suitable example.
+
+Answer : In object-oriented programming, a class is a blueprint for creating objects (instances of a class).
+		It defines the data and behaviors (methods) that the objects of the class will have.
+		
+	Example:-
+		
+		
+	class Car:
+	
+		def __init__(self, brand, model, year):
+			self.brand = brand
+			self.model = model
+			self.year = year
+		
+		def start_engine(self):
+			print("The car engine is started.")
+		
+		def stop_engine(self):
+			print("The car engine is stopped.")
+
+		# Creating objects of the Car class
+		car1 = Car("Toyota", "Camry", 2020)
+		car2 = Car("Honda", "Civic", 2022)
+
+		# Accessing object attributes
+		print(car1.brand)  # Output: Toyota
+		print(car2.model)  # Output: Civic
+
+		# Calling object methods
+		car1.start_engine()  # Output: The car engine is started.
+		car2.stop_engine()  # Output: The car engine is stopped.
+
+
+Question 2: Name the four pillars of OOPs
+
+Answer:-
+
+		Abstraction: This refers to the idea of hiding the implementation details and only showing the relevant information to the user. 
+					It allows the user to focus on the objects and their behavior, rather than the underlying code.
+
+		Encapsulation: This is the mechanism of wrapping data and functions within a single unit (object) to protect the data from
+						external access and modification. This helps to maintain the integrity of the data and the object.
+
+		Inheritance: This is a mechanism of creating new classes (child classes) from existing classes (parent classes). 
+					The child classes inherit the attributes and behaviors of the parent class, and can also have their own unique attributes and behaviors.
+					This helps to reduce code duplication and promote code reuse.
+
+		Polymorphism: This refers to the ability of objects of different classes to respond to the same method call in different ways.
+					This allows objects to be treated as objects of their parent class, while still retaining their unique behavior.
+					This enables objects to be used interchangeably, reducing code complexity and improving code maintainability.
+
+		These four pillars are essential elements of object-oriented programming and work together to allow for the creation of robust, 
+		flexible, and scalable software systems.
+		
+		
+Question 3 : Explain why the __init__() function is used. Give a suitable example.
+
+Answer:-
+
+		The __init__() function in Python is a special method that is automatically called when an object is created from a class.
+		It stands for "initialize" and is used to initialize the attributes of an object.
+		
+	class Person:
+		def __init__(self, name, age):
+			self.name = name
+			self.age = age
+    
+		def display_info(self):
+			print(f"Name: {self.name}, Age: {self.age}")
+
+	# Creating objects of the Person class
+	person1 = Person("Rohit", 30)
+	person2 = Person("makwana", 25)
+
+	# Calling the display_info() method for each object
+	person1.display_info()  # Output: Name: Rohit, Age: 30
+	person2.display_info()  # Output: Name: makwana, Age: 25
+	
+Question 4: Why self is used in OOPs?
+
+
+Answer :-
+
+		In object-oriented programming (OOP), the self keyword is used as a reference to the instance of the object that is calling the method.
+		It is used to access the attributes and methods of the object within the class
+		
+		
+	class car:
+    """
+    Definining a class car with initialized 
+    Manufactured, weight and color attributes
+    """
+
+		def __init__(self, manufacturer, weight, color):
+			self.manufacturer = manufacturer
+			self.weight = weight
+			self.color = color
+
+		def details(self):
+			print(f'This car was manufactured by {self.manufacturer}, its weight is {self.weight} and its color is {self.color}')
+			
+	# Explaining Use of above code with car class 
+	hector = car('Morris Garages',1600,'Glaze Red')
+	hector.details()
+
+Question 5 : What is inheritance? Give an example for each type of inheritance.
+
+Answer:-
+
+	Inheritance is a mechanism in object-oriented programming (OOP) that allows a new class to be created based on an existing class.
+	The new class inherits the attributes and behaviors of the existing class, and can also add its own unique attributes and behaviors.
+	
+	There are different types of inheritance in OOP:
+
+	1.Single Inheritance:
+	
+				In single inheritance, a subclass inherits properties from a single superclass. It follows a simple one-to-one parent-child 
+				relationship.
+
+				Example:
+				
+				class Vehicle:
+					def __init__(self, brand):
+						self.brand = brand
+
+					def drive(self):
+						print("Driving the vehicle.")
+
+				class Car(Vehicle):
+					def __init__(self, brand, model):
+						super().__init__(brand)
+						self.model = model
+
+					def accelerate(self):
+						print("Accelerating the car.")
+
+				# Creating an object of the Car class
+				car = Car("Toyota", "Camry")
+
+				print(car.brand)     # Output: Toyota
+				car.drive()          # Output: Driving the vehicle.
+				car.accelerate()     # Output: Accelerating the car.
+				
+	2.Multiple Inheritance:
+	
+				Multiple inheritance allows a subclass to inherit properties from multiple superclasses. It enables the subclass to acquire
+				characteristics from multiple sources.
+
+				Example:
+				
+					class Animal:
+						def breathe(self):
+							print("Animal is breathing.")
+
+					class Swimmer:
+						def swim(self):
+							print("Swimming...")
+
+					class Dolphin(Animal, Swimmer):
+						def jump(self):
+							print("Jumping out of the water.")
+
+					# Creating an object of the Dolphin class
+					dolphin = Dolphin()
+
+					dolphin.breathe()    # Output: Animal is breathing.
+					dolphin.swim()       # Output: Swimming...
+					dolphin.jump()       # Output: Jumping out of the water.
+
+	3.Multilevel Inheritance:
+	
+				Multilevel inheritance involves inheriting from a derived class, which in turn inherits from another class. It forms a 
+				parent-child-grandchild relationship.
+
+				Example:
+				
+					class Vehicle:
+						def drive(self):
+							print("Driving the vehicle.")
+
+					class Car(Vehicle):
+						def accelerate(self):
+							print("Accelerating the car.")
+
+					class SportsCar(Car):
+						def race(self):
+							print("Racing the sports car.")
+
+					# Creating an object of the SportsCar class
+					sports_car = SportsCar()
+
+					sports_car.drive()      # Output: Driving the vehicle.
+					sports_car.accelerate() # Output: Accelerating the car.
+					sports_car.race()       # Output: Racing the sports car.
+					
+					
+	5.Hierarchical Inheritance:
+	
+				Hierarchical inheritance involves multiple classes inheriting from a single superclass. It allows for specialization by 
+				creating multiple related subclasses.
+
+				Example:
+				
+					class Animal:
+						def eat(self):
+							print("Animal is eating.")
+
+					class Cat(Animal):
+						def meow(self):
+							print("Cat says meow.")
+
+					class Dog(Animal):
+						def bark(self):
+							print("Dog says bark.")
+
+					# Creating objects of the Cat and Dog classes
+					cat = Cat()
+					dog = Dog()
+
+					cat.eat()    # Output: Animal is eating.
+					cat.meow()   # Output: Cat says meow.
+
+					dog.eat()    # Output: Animal is eating.
+					dog.bark()   # Output: Dog says bark.
+
+
+				
+				
+
+
