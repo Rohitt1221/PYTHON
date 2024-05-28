@@ -1,0 +1,52 @@
+Here are the answers to your questions:
+
+What is multithreading in Python? Why is it used? Name the module used to handle threads in Python. Why is the threading module used? Write the use of the following functions (activeCount, currentThread, enumerate).
+
+Multithreading in Python refers to the ability of a program to execute multiple threads concurrently, allowing different parts of the program to run concurrently. It is used to improve the performance of applications that can benefit from parallel execution, such as I/O-bound tasks or tasks that can be parallelized.
+The module used to handle threads in Python is the threading module.
+The threading module is used because it provides a higher-level interface for working with threads compared to the lower-level thread module. It simplifies the process of creating and managing threads in Python programs.
+Functions:
+activeCount: Returns the number of Thread objects currently alive.
+currentThread: Returns the current Thread object.
+enumerate: Returns a list of all Thread objects currently alive.
+Explain the following functions (run, start, join, isAlive).
+
+run: Defines the code to be executed by the thread.
+start: Initiates the thread's activity by calling its run method.
+join: Waits for the thread to complete its execution before proceeding to the next instruction in the main program.
+isAlive: Returns True if the thread is currently executing.
+Write a Python program to create two threads. Thread one must print the list of squares and thread two must print the list of cubes.
+
+python
+Copy code
+import threading
+
+def print_squares():
+    for i in range(1, 6):
+        print(f"Square of {i}: {i*i}")
+
+def print_cubes():
+    for i in range(1, 6):
+        print(f"Cube of {i}: {i*i*i}")
+
+thread1 = threading.Thread(target=print_squares)
+thread2 = threading.Thread(target=print_cubes)
+
+thread1.start()
+thread2.start()
+State advantages and disadvantages of multithreading.
+
+Advantages:
+Improved performance by utilizing multiple CPU cores or by overlapping I/O-bound tasks.
+Increased responsiveness in applications with user interfaces.
+Simplified code structure for parallelizable tasks.
+Disadvantages:
+Complexity in managing shared resources and synchronizing access to them.
+Potential for race conditions and deadlocks, leading to unpredictable behavior.
+Increased memory usage and overhead due to the creation of multiple threads.
+Explain deadlocks and race conditions.
+
+Deadlock: Deadlock occurs when two or more threads are blocked forever, waiting for each other to release resources that they need. It typically happens when multiple threads acquire locks on resources in a different order, leading to a circular wait.
+Race Condition: A race condition occurs when the behavior of a program depends on the sequence or timing of uncontrollable events. It arises when multiple threads access shared resources concurrently, and the outcome of the program depends on the order in which the threads execute. Race conditions can lead to unpredictable behavior and bugs in the program.
+
+
