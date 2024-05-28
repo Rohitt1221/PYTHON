@@ -1,0 +1,16 @@
+Q1. What is Abstraction in OOPs? Explain with an example.
+
+Abstraction in object-oriented programming (OOP) is the concept of hiding the implementation details and showing only the essential features of an object. It helps in reducing programming complexity and also increases efficiency by allowing the programmer to focus on what an object does rather than how it does it. For example, when you drive a car, you don't need to know the internal mechanisms of the engine; you just need to know how to operate the accelerator, brakes, and steering wheel.
+Q2. Differentiate between Abstraction and Encapsulation. Explain with an example.
+
+Abstraction focuses on hiding the complex implementation details and showing only the necessary features, while encapsulation is the bundling of data and methods that operate on the data into a single unit (class), and controlling access to that unit. An analogy to understand this difference is that abstraction is like using a remote control to operate a television without knowing the internal circuitry, while encapsulation is like the television itself, where all the components are contained within the casing.
+Example: Suppose we have a Car class. Abstraction would involve hiding the internal workings of the car and only exposing methods like start(), accelerate(), and brake(). Encapsulation, on the other hand, would involve bundling the data (like engine details, fuel level) and methods (like startEngine(), refuel()) within the Car class and controlling access to them.
+Q3. What is the abc module in Python? Why is it used?
+
+The abc module in Python stands for "Abstract Base Classes". It provides a way to define abstract base classes in Python. An abstract base class is a class that cannot be instantiated on its own but can be subclassed to provide concrete implementations of its methods. It is used to enforce a certain structure on subclasses and to define a common interface that subclasses must adhere to.
+Q4. How can we achieve data abstraction?
+
+In most object-oriented programming languages, including Python, data abstraction can be achieved through the use of abstract classes and interfaces. Abstract classes define methods without providing implementations, leaving it to the subclasses to implement those methods. Interfaces, on the other hand, define method signatures without any implementations. By utilizing abstract classes and interfaces, developers can enforce a certain structure and behavior on subclasses while hiding the implementation details.
+Q5. Can we create an instance of an abstract class? Explain your answer.
+
+No, we cannot create an instance of an abstract class in Python. Attempting to instantiate an abstract class directly will result in a TypeError. Abstract classes are meant to be subclassed, and their methods are meant to be overridden by the subclasses to provide concrete implementations. They serve as templates or blueprints for creating concrete classes but cannot be instantiated themselves
