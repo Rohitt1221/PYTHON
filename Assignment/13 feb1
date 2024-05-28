@@ -1,0 +1,70 @@
+Q1. Explain why we have to use the Exception class while creating a Custom Exception.
+
+We use the Exception class as the base class for custom exceptions because it provides a standard interface and behavior for all exceptions in Python. By inheriting from the Exception class, custom exceptions can benefit from features such as traceback information, message passing, and consistency in exception handling across different parts of code. Additionally, using the Exception class makes it easier for developers to understand and handle custom exceptions in their code.
+Q2. Write a Python program to print Python Exception Hierarchy.
+
+python
+Copy code
+for exc in dir(__builtins__):
+    if "Error" in exc:
+        print(exc)
+Q3. What errors are defined in the ArithmeticError class? Explain any two with an example.
+
+The ArithmeticError class in Python includes errors related to arithmetic operations. Two examples are:
+ZeroDivisionError: Raised when division or modulo by zero is encountered.
+python
+Copy code
+try:
+    result = 10 / 0
+except ZeroDivisionError as e:
+    print("Error:", e)
+OverflowError: Raised when the result of an arithmetic operation is too large to be represented.
+python
+Copy code
+import sys
+try:
+    result = sys.maxsize + 1
+except OverflowError as e:
+    print("Error:", e)
+Q4. Why is the LookupError class used? Explain with examples of KeyError and IndexError.
+
+The LookupError class is used to handle errors related to lookup operations such as indexing and key lookup in sequences and mappings. Examples include:
+KeyError: Raised when a dictionary key is not found.
+python
+Copy code
+my_dict = {'a': 1, 'b': 2}
+try:
+    value = my_dict['c']
+except KeyError as e:
+    print("Error:", e)
+IndexError: Raised when a sequence subscript is out of range.
+python
+Copy code
+my_list = [1, 2, 3]
+try:
+    value = my_list[3]
+except IndexError as e:
+    print("Error:", e)
+Q5. Explain ImportError. What is ModuleNotFoundError?
+
+ImportError: Raised when an import statement fails to find the module or when the imported module fails to initialize properly.
+ModuleNotFoundError: A subclass of ImportError, specifically raised when a module could not be found.
+Example:
+python
+Copy code
+try:
+    import non_existing_module
+except ImportError as e:
+    print("Error:", e)
+Q6. List down some best practices for exception handling in Python.
+
+Be specific with exception handling rather than catching generic exceptions.
+Handle exceptions at an appropriate level in your code.
+Use try-except-else blocks where possible for clearer code structure.
+Always provide informative error messages to aid debugging.
+Avoid using bare except clauses.
+Use context managers (with statement) for resource management.
+Log exceptions for better understanding and debugging.
+Follow consistent exception handling patterns across your codebase.
+
+
